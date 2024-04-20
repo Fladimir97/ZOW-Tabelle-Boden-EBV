@@ -42,13 +42,15 @@ Die vorliegende ZOW-Tabelle wendet auch gängige Interpretationsmuster wie die R
 
 ### 4.1 Runden
 
-Die Messwerte werden gerundet. Bei der Rundung wird analog auf die Vorgaben der Ziff. 2.9 der TA-Luft zurückgegriffen. Einstufungsrelevant ist demnach die Nachkommastelle, in der der Grenzwert definiert wird.
+Die Messwerte werden gerundet. Bei der Rundung wird analog auf die Vorgaben der Ziff. 2.9 der TA-Luft zurückgegriffen. Einstufungsrelevant ist demnach die Nachkommastelle, in der der jeweilige Grenzwert definiert wird.
 
-Beispiel: 
+Beispiel: Der BM-0 Grenzwert liegt bei PAK₁₆ bei 3 mg/kg. eine Nachkommastelle ist im Gesetzestext nicht definiert. Daher wird bei PAK₁₆ auf die volle Zahl gerundet. 
 
-### 4.2 Die 4 von 5 Regel 
+▶️ Messwert 1: 3,45 mg/kg wird abgerundet auf 3 mg/kg.
+▶️ Messwert 2: 3,52 mg/kg wird aufgerundet auf 4 mg/kg.
 
+### 4.2 Die 4 von 5 Regel und der statistische Ansatz
 
-### 4.3 Der statistische Ansatz
+Diese Interpretationshilfen beruhen auf den Vorgaben der 
 
 
