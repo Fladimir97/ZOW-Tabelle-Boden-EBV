@@ -47,6 +47,7 @@ Die Messwerte werden gerundet. Bei der Rundung wird analog auf die Vorgaben der 
 Beispiel: Der BM-0 Grenzwert liegt bei PAK₁₆ bei 3 mg/kg. eine Nachkommastelle ist im Gesetzestext nicht definiert. Daher wird bei PAK₁₆ auf die volle Zahl gerundet. 
 
 ▶️ Messwert 1: 3,45 mg/kg wird abgerundet auf 3 mg/kg.
+
 ▶️ Messwert 2: 3,52 mg/kg wird aufgerundet auf 4 mg/kg.
 
 ### 4.2 Die 4 von 5 Regel und der statistische Ansatz
