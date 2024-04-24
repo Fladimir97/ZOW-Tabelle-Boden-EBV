@@ -53,7 +53,7 @@ Die Probenahme bei Erdaushub hat gem. [§ 14 Abs. 1 S. 2](https://www.gesetze-im
 
 Die [Handlungshilfe zur Anwendung der LAGA PN98](https://www.laga-online.de/documents/hinweise_pn98_stand_2019_mai_1564665128.pdf) umfasst auch Informationen zur Bewertung der Messergebnisse:  
 
-*Für die Beurteilung streuender Analysenergebnisse ist in der [Methodensammlung Feststoffuntersuchung](https://www.umweltbundesamt.de/sites/default/files/medien/359/dokumente/20210615_methodensammlungfeststoffuntersuchung_v2_final_0.pdf) (Methosa) eine Beurteilungsgrundlage hinterlegt, anhand derer man entscheiden kann, ob die Ergebnisse eine vorgegebene Grenze einhalten.*  
+*"Für die Beurteilung streuender Analysenergebnisse ist in der [Methodensammlung Feststoffuntersuchung](https://www.umweltbundesamt.de/sites/default/files/medien/359/dokumente/20210615_methodensammlungfeststoffuntersuchung_v2_final_0.pdf) (Methosa) eine Beurteilungsgrundlage hinterlegt, anhand derer man entscheiden kann, ob die Ergebnisse eine vorgegebene Grenze einhalten."*  
 (vgl. Handlungshilfe zur Anwendung der LAGA Mitteilung 32 (LAGA PN 98) Stand: 5. Mai 2019 Seite 15)
 
 In der Methosa ist folgendes geregelt: Ein Grenzwert gilt als eingehalten, wenn die obigen Voraussetzungen und mindestens eine der nachfolgenden Bedingungen erfüllt sind:  
