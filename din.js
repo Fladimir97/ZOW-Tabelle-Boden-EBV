@@ -7,7 +7,7 @@ function din(amount) {
 	let reduced = amount <= 500 ?  2 : Math.ceil(amount / 250)
 	out = `<div style="color:black"><h3>Erforderliche Probenzahl nach DIN 19698-6</h3>
 
-		<math style="font-size: 20pt">
+		<math>
 	<mrow>
 		
 		<mi>2 Mischproben</mi>
