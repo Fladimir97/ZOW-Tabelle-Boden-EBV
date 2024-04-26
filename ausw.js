@@ -19,6 +19,7 @@ function ausw(){
 						<th>Bodenart</th>
 						<th>Bodenklasse</th>
 						<th>TOC ≥ 0,5 M-%?</th>
+      						<th>Einstufungsrelevanter Zuordnungswert</th>
 					</tr>
 					<tr>
 						<td align=center>${Abfallmenge}</td>
@@ -26,6 +27,7 @@ function ausw(){
 }</td>
 						<td align=center>${document.getElementById("Bodenklasse").options[document.getElementById("Bodenklasse").selectedIndex].text}</td>
 						<td align=center>${document.getElementById("TOC").options[document.getElementById("TOC").selectedIndex].text}</td>
+      						<td align=center>${soilname}-${document.getElementById("ZW").options[document.getElementById("ZW").selectedIndex].text}</td>
 					</tr>
 				</table>`
 
@@ -36,6 +38,7 @@ function ausw(){
 						<th>Bodenart</th>
 						<th>Bodenklasse</th>
 						<th>TOC ≥ 0,5 M-%?</th>
+      						<th>Einstufungsrelevanter Zuordnungswert</th>
 					</tr>
 					<tr>
 						<td>${Abfallbezeichnung}</td>
@@ -44,6 +47,9 @@ function ausw(){
 }</td>
 						<td align=center>${document.getElementById("Bodenklasse").options[document.getElementById("Bodenklasse").selectedIndex].text}</td>
 						<td align=center>${document.getElementById("TOC").options[document.getElementById("TOC").selectedIndex].text}</td>
+      						<td align=center>${soilname}-${document.getElementById("ZW").options[document.getElementById("ZW").selectedIndex].text}</td>
+
+      
 					</tr>
 				</table><br>` 
 
