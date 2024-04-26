@@ -6,7 +6,8 @@ Die Ersatzbaustoffe werden nach Ihrer Schadstoffbelastung bestimmten Güteklasse
 
 ## 1. Installation & Setup
 
-(---)
+Das Programm kann für Windows Anwendungen als .exe hier heruntergeladen werden: [Download](https://github.com/Fladimir97/ZOW-Tabelle-Boden-EBV/releases/download/v.1.0/Bodenauswertung-EBV.exe)  
+Den vollen Release der aktuellen Version 1.0 dinden Sie [hier](https://github.com/Fladimir97/ZOW-Tabelle-Boden-EBV/releases/tag/v.1.0).
 
 ## 2. Wie funktioniert die Tabelle?
 
@@ -22,23 +23,11 @@ Weitere Funktionen der Tabelle:
 - 🧪 Ermittelt die erforderliche Probenzahl nach den Vorgaben der [LAGA PN98](https://www.laga-online.de/documents/m-32_pn98_red-aend_2019_mai_1562758999.pdf) bzw. der DIN 19698-6
 - 📈 Ermittelt in Abhängigkeit der einstufungsrelevanten Zuordungswerte, ob Schadstoff inhomogen verteilt sind
 
-## 3. Kompabilität
-
-Die Tabelle kann in all Ihren Funktionen über folgende Internet-Browser verwendet werden:
-
-- Google Chrome
-- Microsoft Edge
-
-Nicht kompatibel sind folgende Internet-Browser:
-
-- Mozialla Firefox
-- Internet Explorer
-
-## 4. Technische Hinweise
+## 3. Technische Hinweise
 
 Die vorliegende ZOW-Tabelle wendet auch gängige Interpretationsmuster wie die Rundungsregel, die 4 von 5 Regel und den statistischen Ansatz der Methosa an. 
 
-### 4.1 Runden
+### 3.1 Runden
 
 Die Messwerte werden gerundet. Bei der Rundung wird analog auf die Vorgaben der Ziff. 2.9 der TA-Luft zurückgegriffen. Einstufungsrelevant ist demnach die Nachkommastelle, in der der jeweilige Grenzwert definiert wird.
 
@@ -47,7 +36,7 @@ Beispiel: Der BM-0 Grenzwert liegt bei PAK₁₆ bei 3 mg/kg. eine Nachkommastel
 ▶️ Messwert 1: 3,45 mg/kg wird abgerundet auf 3 mg/kg.  
 ▶️ Messwert 2: 3,52 mg/kg wird aufgerundet auf 4 mg/kg.
 
-### 4.2 Die 4 von 5 Regel und der statistische Ansatz
+### 3.2 Die 4 von 5 Regel und der statistische Ansatz
 
 Die Probenahme bei Erdaushub hat gem. [§ 14 Abs. 1 S. 2](https://www.gesetze-im-internet.de/ersatzbaustoffv/__14.html) i.V.m. [§ 8 Abs. 1 EBV](https://www.gesetze-im-internet.de/ersatzbaustoffv/__8.html) grundsätzlich nach den Vorgaben der [LAGA PN98](https://www.laga-online.de/documents/m-32_pn98_red-aend_2019_mai_1562758999.pdf) zu erfolgen. Dieses Regelwerk beschreibt wir Haufwerke beprobt werden. 
 
