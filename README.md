@@ -2,7 +2,7 @@
 
 Die [Ersatzbaustoffverordnung (EBV)](https://www.gesetze-im-internet.de/ersatzbaustoffv/) regelt seit dem 01. August 2023 bundesweit einheitlich, wie mineralische Ersatzbaustoffe hergestellt und verwertet werden dürfen. Als mineralische Ersatzbaustoffe gelten insbesondere Bauschutt aber auch Bodenmaterial und Baggergut. 
 
-Die Ersatzbaustoffe werden nach Ihrer Schadstoffbelastung bestimmten Güteklassen zugeorndet. Die Auswertung und Interpretation der Analyseergebnisse ist, insbesondere bei Bodenmaterial und Baggergut, teils unübersichtlich und mühsam. Zahlreiche Faktoren, wie die Bodenart (Sand, Lehm, Ton, Schluff) oder der TOC-Gehalt haben Auswirkungen auf die jeweiligen Schadstoff-Grenzwerte. Aus diesem Grund wurde die hier vorliegende ZOW-Tabelle entwickelt. Das Programm ist speziell auf die Materialarten Bodenmaterial (BM) und Baggergut (BG) ausgerichtet und ermittelt bequem und schnell die jeweilige Güteklasse. Hierbei werden auch technisch gängige Interpretationshilfen berücksichtigt. 
+Die Ersatzbaustoffe werden nach Ihrer Schadstoffbelastung bestimmten Güteklassen zugeordnet. Die Auswertung und Interpretation der Analyseergebnisse ist, insbesondere bei Bodenmaterial und Baggergut, teils unübersichtlich und mühsam. Zahlreiche Faktoren, wie die Bodenart (Sand, Lehm, Ton, Schluff) oder der TOC-Gehalt haben Auswirkungen auf die jeweiligen Schadstoff-Grenzwerte. Aus diesem Grund wurde die hier vorliegende ZOW-Tabelle entwickelt. Das Programm ist speziell auf die Materialarten Bodenmaterial (BM) und Baggergut (BG) ausgerichtet und ermittelt bequem und schnell die jeweilige Güteklasse. Hierbei werden auch technisch gängige Interpretationshilfen berücksichtigt. 
 
 ## 1. Installation & Setup
 
@@ -10,20 +10,21 @@ Das Programm kann für Windows Anwendungen als .exe hier heruntergeladen werden:
 Den vollen Release der aktuellen Version 1.0.1 finden Sie [hier](https://github.com/Fladimir97/ZOW-Tabelle-Boden-EBV/releases/tag/v.1.0.1)
 
 Das Programm wurde mit Hilfe von [Electron](https://www.electronjs.org/) kompiliert.
+Bei der grafischen Auswertung wurde auf die [Plotly Graphing Library](https://plotly.com/javascript/) zurückgegriffen.
 
 ## 2. Wie funktioniert die Tabelle?
 
-In die Tabelle werden die Messwerte und Stammdaten des jeweiligen Haufwerks eingegeben. Die Tabelle errechnet, ob bei dem jeweiligen Parameter Schadstoffüberschreitungen vorliegen, und gibt eine Einstufung ab. Die Messwerte werdne hierbei automatisch gerundet. Außerdem wird ein Detailbericht angefertigt. 
+In die Tabelle werden die Messwerte und Stammdaten des jeweiligen Haufwerks eingegeben. Die Tabelle errechnet, ob bei dem jeweiligen Parameter Schadstoffüberschreitungen vorliegen, und gibt eine Einstufung ab. Die Messwerte werden hierbei automatisch gerundet. Außerdem wird ein Detailbericht angefertigt. 
 
-In der ersten Spalte der Tabelle ist für jeden Parameter eine Checkbox hinterlegt. Sobald diese Checkbox aktiviert ist, werden die entsprechenden Messwerte tabellarisch im Detailbericht aufgeführt. Die Messwerte sind hierbei aufsteigend sorteirt. Zudem werden die Werte  Mittelwert (X̅) sowie X̅ + Streuung aufgelistet. Diese sind wichtig für die Interpretation der Messergebnisse. Weitere Informationen dazu unter Ziff. 4 Technische Hinweise.
+In der ersten Spalte der Tabelle ist für jeden Parameter eine Checkbox hinterlegt. Sobald diese Checkbox aktiviert ist, werden die entsprechenden Messwerte tabellarisch im Detailbericht aufgeführt. Die Messwerte sind hierbei aufsteigend sortiert. Zudem werden die Werte  Mittelwert (X̅) sowie X̅ + Streuung aufgelistet. Diese sind wichtig für die Interpretation der Messergebnisse. Weitere Informationen dazu unter Ziff. 4 Technische Hinweise.
 
 Weitere Funktionen der Tabelle:
 
 - 💾 Speichern und Laden
 - 📊 Grafische Auswertung der Messergebnisse
-- 🖨️ Drucken / Generireung einer PDF der Tabelle und des Detailberichts
+- 🖨️ Drucken / Generierung einer PDF der Tabelle und des Detailberichts
 - 🧪 Ermittelt die erforderliche Probenzahl nach den Vorgaben der [LAGA PN98](https://www.laga-online.de/documents/m-32_pn98_red-aend_2019_mai_1562758999.pdf) bzw. der DIN 19698-6
-- 📈 Ermittelt in Abhängigkeit der einstufungsrelevanten Zuordungswerte, ob Schadstoff inhomogen verteilt sind
+- 📈 Ermittelt in Abhängigkeit der einstufungsrelevanten Zuordnungswerte, ob Schadstoff inhomogen verteilt sind
 
 ## 3. Technische Hinweise
 
@@ -49,7 +50,31 @@ Die [Handlungshilfe zur Anwendung der LAGA PN98](https://www.laga-online.de/docu
 
 In der Methosa ist folgendes geregelt: Ein Grenzwert gilt als eingehalten, wenn die obigen Voraussetzungen und mindestens eine der nachfolgenden Bedingungen erfüllt sind:  
 - alle Messwerte der Laborproben unterschreiten den Grenzwert oder
-- der Mittelwert (X̅) und 80 % (4 von 5-Regel) aller Laborproben (LP) unterschreiten den Grenzwert oder
-- der Mittelwert (X̅) zuzüglich der ermittelten Streuung des Mittelwerts unterschreitet den Grenzwert (statistischer Ansatz)
+- der Mittelwert (x̄) und 80 % (4 von 5-Regel) aller Laborproben (LP) unterschreiten den Grenzwert oder
+- der Mittelwert (x̄) zuzüglich der ermittelten Streuung des Mittelwerts unterschreitet den Grenzwert (statistischer Ansatz)
 
-Das Programm ermittelt zur vereinfachten Analysebewertung automatisch für die gewünschten Paramter den Mittelwert und die Streuung.
+Die Werte errechnen sich folgendermaßen:
+
+#### Begriffsbestimmungen:
+
+| Abkürzung         | Erklärung                       |
+|-------------------|---------------------------------|
+|$LP$               | Laborprobe                      | 
+|$LPi$              | Messwert der Laborprobe $i$     | 
+|$SLP$              | Standardabweichung              | 
+|$n$                | Anzahl der Laborproben          | 
+|$x̄$                | Mittelwert der Messwerte        | 
+
+#### Bestimmung des Mittelwerts:
+```math
+x̄  (Mittelwert) = \frac{1}{n} {\sum_{i=0}^n {LPi}}  
+```
+#### Bestimmung der Standardabweichung:
+```math
+Standardabweichung (SLP) =  \sqrt{\frac{1}{n-1} {\sum_{i=0}^n (LPi -x̄)^2}}
+```
+#### Bestimmung der Streuung:
+```math
+Streuung  = 1,65 \cdot  \frac{SLP}{\sqrt{n}}
+```
+Das Programm ermittelt zur vereinfachten Analysebewertung automatisch für die gewünschten Parameter den Mittelwert und die Streuung.
