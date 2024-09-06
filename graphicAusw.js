@@ -1,4 +1,4 @@
-﻿function getPhShapes(xmin, xmax, soil){
+function getPhShapes(xmin, xmax, soil){
 	let legendX = ["Grenzwert", "Grenzwert", "Grenzwert", "Grenzwert", "Grenzwert"]
 	let legendY = [2.75, 6, 8, 10.75, 13]
 	let legendText = [`>${soil}-F3`, `${soil}-F3`, `${soil}-0`, `${soil}-F3`, `>${soil}-F3`]
@@ -94,7 +94,7 @@ function getRowValues(Para, paName){
 		if (SampleName == ""){
 			SampleName = `Eingabefeld ${column}`;
 			}
-		if (! (MW == "")){
+		if ((! (MW == "")) && document.getElementById(`SampleNumber${column}`).checked){
 			resY = resY.concat(parseFloat(MW));
 			resX = resX.concat(SampleName);
 			ErrorArray = ErrorArray.concat(roundedMW - MW)
@@ -239,7 +239,7 @@ function graphicAusw(){
             		y0: grenzwerte[grenzwerte.length - 1],
             		x1: "Grenzwert", //x[x.length - 1]
 			// Bei Eluatwerten können die BM-0* Werte unter den BM-F0* Werten liegen
-            		y1: grenzwerte[grenzwerte.length - 1] * 2,
+            		y1: grenzwerte[grenzwerte.length - 1] * 10,
 			// Ausnahmeregelung für Thallium und Quecksilber im Eluat - GW-Überschreitung -> >BM-F3
             		fillcolor: (Para == QuecksilberEl || Para == ThalliumEl || Para == TOC) ? Colordic[">BM-F3"] : Colordic[`>${legendText[legendText.length -1]}`],
             		opacity: 0.5,
