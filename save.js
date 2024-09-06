@@ -1,11 +1,11 @@
-﻿async function saveData(){
-	let inputs = document.getElementsByTagName("input")
+async function saveData(){
+	let inputs = document.querySelectorAll("input, textarea")
 	let jsonObj = {}	
 	for (let i = 0; i < inputs.length; i++){
 		let currentInput = inputs[i]
 		let value = (currentInput.value);
 		let key = (currentInput.id);
-		if (key.includes("checkbox")){
+		if (key.includes("checkbox") || key.includes("SampleNumber")){
 			value = currentInput.checked;
 			};
 		jsonObj[key] = value};
