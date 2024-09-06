@@ -23,8 +23,10 @@ nav, header, button, .DontPrint, #app, h1{
 	display: none;
 	}
 
+	math {
+		font-size: 11px;
+	}
+	
+
 }
 
-math {
-	font-size: 11px;
-}
