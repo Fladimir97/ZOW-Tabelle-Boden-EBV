@@ -1,11 +1,12 @@
-﻿function init(){
+function init(){
 	const app = document.getElementById("app");
 	let inputTable = "<table><thead><th></th><th>Mischprobe</th>";
 	
 	// Überschriften
 	
 	for (let index = 0; index < 12; index++){
-		inputTable += `<th colspan="2"><input class="MPHead" id="SampleName${index}"></input></th>`}
+		inputTable += `<th colspan="2"><input value="true" type="checkbox" id="SampleNumber${index}" checked="true" onclick="hideText(${index})"></input>
+						<textarea class="MPHead" id="SampleName${index}" onclick="ausw()" style="resize:none"></textarea></th>`}
 	inputTable += "<th>Homogenität</th></thead>";
 
 	// Messwerte
@@ -41,7 +42,7 @@
 
 init()
 
-let inputs = document.getElementsByTagName("input");
+let inputs = document.querySelectorAll("input, textarea");
 
 for (let w = 0; w < inputs.length; w++){
     let currentWidget = inputs[w]; 
