@@ -1,4 +1,4 @@
-﻿
+
 function ausw(){
 	const soilname = document.getElementById("Bodenklasse").value;
 	const soilclass = document.getElementById("Bodenart").value;
@@ -90,9 +90,10 @@ function ausw(){
 			let CurrentErgLabel = document.getElementById(`Erg${PaName}${n}`);
 			CurrentErgLabel.style.backgroundColor = "";
 			CurrentErgLabel.textContent = "";
-			
+			// Prüfung ob die Probe mit ausgewertet werden soll
+			let SampleNumerCheckbox = document.getElementById(`SampleNumber${n}`).checked
 
-			if (CurrentMW != ""){
+			if (CurrentMW != "" && SampleNumerCheckbox == true){
 
 				MWNameList.push(CurrentMWName);
 				MWList.push(CurrentMW);
@@ -266,7 +267,7 @@ function ausw(){
 	
 		Bericht.style.color = "black"; 
 		Bericht.style.background = "white";  
-
+	updateCanvas()
 	}
 
 
@@ -321,4 +322,39 @@ function standardabweichung(Messwerte, Mittelwert){
 function streuung(standardabweichung, probenzahl) {
     let streuung = 1.65 * (parseFloat(standardabweichung) / Math.pow(probenzahl, 0.5))
     return streuung
+}
+
+
+function hideText(row){
+	//console.log(row)
+	let checked = document.getElementById(`SampleNumber${row}`).checked
+	//console.log(checked)
+	for (index in Parameterliste){
+		//console.log(index)
+		let inputID = `Inp${Parameterliste[index].Name}${row}`;
+		//console.log(inputID);
+		let InputField = document.getElementById(inputID);
+		if (checked == true){
+			InputField.style.color = "black";
+		} else if (checked == false){
+			InputField.style.color = "white" 
+		}
+	}
+	ausw();
+}
+
+
+function updateCanvas(){
+	currentCanvasParameter = document.getElementById("GO").value
+	console.log(currentCanvasParameter)
+	let ValueList = []
+	for (let i = 0; i < 12; i++){
+		let inputField = document.getElementById(`Inp${Parameterliste[currentCanvasParameter].Name}${i}`).value;
+		if (! (inputField == "")){
+			ValueList = ValueList.concat(inputField)
+		}
+	}
+	if (ValueList.length > 0){
+		graphicAusw();
+	}
 }
