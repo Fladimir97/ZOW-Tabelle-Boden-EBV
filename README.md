@@ -7,7 +7,7 @@ Die Ersatzbaustoffe werden nach Ihrer Schadstoffbelastung bestimmten Güteklasse
 ## 1. Installation & Setup
 
 Das Programm kann für Windows Anwendungen als .exe hier heruntergeladen werden: [Download](https://github.com/Fladimir97/ZOW-Tabelle-Boden-EBV/releases/download/v.1.0.2/Bodenauswertung-1.0.2.Setup.exe)  
-Den vollen Release der aktuellen Version 1.0.1 finden Sie [hier](https://github.com/Fladimir97/ZOW-Tabelle-Boden-EBV/releases/tag/v.1.0.2)
+Den vollen Release der aktuellen Version 1.0.2 finden Sie [hier](https://github.com/Fladimir97/ZOW-Tabelle-Boden-EBV/releases/tag/v.1.0.2)
 
 Das Programm wurde mit Hilfe von [Electron](https://www.electronjs.org/) kompiliert.
 Bei der grafischen Auswertung wurde auf die [Plotly Graphing Library](https://plotly.com/javascript/) zurückgegriffen.
