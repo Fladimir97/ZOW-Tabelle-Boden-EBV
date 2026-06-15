@@ -61,7 +61,7 @@ Die Werte errechnen sich folgendermaßen:
 
 | Abkürzung         | Erklärung                       |
 |-------------------|---------------------------------|
-|$\text{LP}$               | Menge aller Laborproben                      | 
+|$\text{LP} := \{\text{LP}_1, \dots, \text{LP}_n\}$               | Menge aller Laborproben                      | 
 |$\text{LP}_{i}$              | Messwert der Laborprobe $i$     | 
 |$\text{SLP}$              | Standardabweichung              | 
 |$n$                | Anzahl der Laborproben          | 
@@ -69,11 +69,11 @@ Die Werte errechnen sich folgendermaßen:
 
 #### Bestimmung des Mittelwerts:
 ```math
-\bar{x}  \text{(Mittelwert)} = \frac{1}{n} {\sum_{\text{LP}_{i} \in \text{LP}} \text{LP}_{i}}  
+\bar{x}  \text{(Mittelwert)} = \frac{\sum_{\text{LP}_{i} \in \text{LP}} \text{LP}_{i}}{n} 
 ```
 #### Bestimmung der Standardabweichung:
 ```math
-\text{Standardabweichung (SLP)} =  \sqrt{\frac{1}{n-1} {\sum_{i=0}^n (\text{LP}_{i} - \bar{x})^2}}
+\text{SLP} =  \sqrt{\frac{\sum_{\text{LP}_{i} \in \text{LP}} (\text{LP}_{i} - \bar{x})^2}}{n-1} 
 ```
 #### Bestimmung der Streuung:
 ```math
