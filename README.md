@@ -6,11 +6,13 @@ Die Ersatzbaustoffe werden nach Ihrer Schadstoffbelastung bestimmten Güteklasse
 
 ## 1. Installation & Setup
 
-Das Programm kann für Windows Anwendungen als .exe hier heruntergeladen werden: [Download](https://github.com/Fladimir97/ZOW-Tabelle-Boden-EBV/releases/download/v.1.0.2/Bodenauswertung-1.0.2.Setup.exe)  
+Das Programm kann für Windows Anwendungen als `.exe hier heruntergeladen werden: [Download](https://github.com/Fladimir97/ZOW-Tabelle-Boden-EBV/releases/download/v.1.0.2/Bodenauswertung-1.0.2.Setup.exe)  
 Den vollen Release der aktuellen Version 1.0.2 finden Sie [hier](https://github.com/Fladimir97/ZOW-Tabelle-Boden-EBV/releases/tag/v.1.0.2)
 
 Das Programm wurde mit Hilfe von [Electron](https://www.electronjs.org/) kompiliert.
 Bei der grafischen Auswertung wurde auf die [Plotly Graphing Library](https://plotly.com/javascript/) zurückgegriffen.
+
+Die Anwendung kann auch unter folgendem [Link](https://fladimir97.github.io/ZOW-Tabelle-Boden-EBV/) online getestet werden. Bitte beachten Sie, dass die Speicher- und Ladefunktionen nur in Chromium Browsern funktionieren.
 
 ## 2. Wie funktioniert die Tabelle?
 
@@ -59,7 +61,7 @@ Die Werte errechnen sich folgendermaßen:
 
 | Abkürzung         | Erklärung                       |
 |-------------------|---------------------------------|
-|$\text{LP}$               | Laborprobe                      | 
+|$\text{LP}$               | Menge aller Laborproben                      | 
 |$\text{LP}_{i}$              | Messwert der Laborprobe $i$     | 
 |$\text{SLP}$              | Standardabweichung              | 
 |$n$                | Anzahl der Laborproben          | 
@@ -67,7 +69,7 @@ Die Werte errechnen sich folgendermaßen:
 
 #### Bestimmung des Mittelwerts:
 ```math
-\bar{x}  \text{(Mittelwert)} = \frac{1}{n} {\sum_{i=0}^n \text{LP}_{i}}  
+\bar{x}  \text{(Mittelwert)} = \frac{1}{n} {\sum_{\text{LP}_{i} \in \text{LP}} \text{LP}_{i}}  
 ```
 #### Bestimmung der Standardabweichung:
 ```math
