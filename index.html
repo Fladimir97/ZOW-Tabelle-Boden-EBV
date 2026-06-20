@@ -6,21 +6,19 @@
 	<title>Bodenanalyse Auswertung - Ersatzbaustoffverordnung (EBV)</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">	
-	
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="printBericht.css" id="print-stylesheet">
-
+	<link rel="stylesheet" type="text/css" href="./style/style.css">
+	<link rel="stylesheet" type="text/css" href="./style/printBericht.css" id="print-stylesheet">
 	<script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
-	<script src="graphicAusw.js"></script>
+	<script src="./scripts/graphicAusw.js"></script>
 
 
 </head>
 
 <body style="padding-left:2%">
-	
+
 	<nav id="nav">
 	</nav>
 
@@ -29,7 +27,7 @@
 			<h1>ZOW-Tabelle für Bodenmaterial und Baggergut nach den Vorgaben der Ersatzbaustoffverordnung (EBV) ♻️</h1>
       	</p>
 	</header>
-	
+
 
 
 	<main>
@@ -87,11 +85,17 @@
 		<option value="F3">F3</option>
 	</select>
 
+	<label class="MainOptionsLabel" for="SampleCount">Anzahl Laborproben (max. 15)</label>
+	<div>
+		<input class="Stammdatgeninput" id="SampleCount" type="number" min="1" max="15" value="12">
+		<button onclick="resizeTable(parseInt(document.getElementById('SampleCount').value))">Tabelle anpassen</button>
+	</div>
+
 	<label class="GraphicOptions" for="GO">Grafische Auswertung</label>
 	<select class="StammdatenDropdown" name="GO" id="GO" onchange="graphicAusw()">
-		
+
 	</select>
-	
+
 
 	</div>
 	<div id='myDiv' style="width:750px;margin-left:100px">
@@ -101,8 +105,8 @@
 	<br class="DontPrint">
 	<div id="app">
 	</div>
-	
-	<br class="DontPrint"><br class="DontPrint">	
+
+	<br class="DontPrint"><br class="DontPrint">
 
 	<div class="DontPrint">
 	<button onclick="ausw()">Auswertung starten</button>
@@ -114,27 +118,26 @@
 	<select class="DruckDropdown" name="DruckOpt" id="DruckOpt" onchange="changeprintSheet()">
 		<option value="printBericht.css">Bericht</option>
 		<option value="printZOW.css">ZOW-Tabelle</option>
-	</select>	
+	</select>
 
 	<button onclick="window.print();">Drucken</button>
 
 	</div>
-	
+
 	<div id="Bericht" style="color:black; background:#202e39"></div>
 
+	<script src="./scripts/Parameter.js"></script>
+	<script src="./scripts/ParameterListe.js"></script>
+	<script src="./scripts/init.js"></script>
+	<script src="./scripts/homogen.js"></script>
+	<script src="./scripts/pn98.js"></script>
+	<script src="./scripts/din.js"></script>
+	<script src="./scripts/ColorDic.js"></script>
+	<script src="./scripts/print.js"></script>
+	<script src="./scripts/save.js"></script>
+	<script src="./scripts/load.js"></script>
+	<script src="./scripts/ausw.js"></script>
 
-	<script src="Parameter.js"></script>
-	<script src="ParameterListe.js"></script>
-	<script src="init.js"></script>
-	<script src="homogen.js"></script>
-	<script src="pn98.js"></script>
-	<script src="din.js"></script>
-	<script src="ColorDic.js"></script>
-	<script src="print.js"></script>
-	<script src="save.js"></script>
-	<script src="load.js"></script>
-	<script src="ausw.js"></script>
-	
 
 	</main>
 
@@ -144,4 +147,3 @@
 
 
 </html>
-
