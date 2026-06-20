@@ -1,5 +1,37 @@
 const CACHE_KEY = "ebv_zow_boden_cache";
 
+function reset() {
+	if (!confirm("Alle eingegebenen Werte werden unwiderruflich gelöscht.\n\nTrotzdem zurücksetzen?")) {
+		return;
+	}
+
+	// Stammdaten auf Standardwerte zurücksetzen
+	document.getElementById("Abfallbezeichnung").value = "";
+	document.getElementById("Abfallmenge").value       = "";
+	document.getElementById("Probenahme").value        = "0";
+	document.getElementById("Bodenart").value          = "0";
+	document.getElementById("Bodenklasse").value       = "BM";
+	document.getElementById("TOC").value               = "0";
+	document.getElementById("ZW").value                = "0";
+	document.getElementById("DruckOpt").value          = "printBericht.css";
+
+	// Tabelle auf Standardgröße (12 LP) neu aufbauen —
+	// init() setzt alle Messwert-Inputs, Probennamen und SampleNumber-Checkboxen zurück
+	currentSamples = 12;
+	document.getElementById("SampleCount").value = 12;
+	init(currentSamples);
+	addEvents();
+
+	// Cache leeren
+	try {
+		localStorage.removeItem(CACHE_KEY);
+	} catch (e) {
+		console.warn("Cache konnte nicht gelöscht werden:", e);
+	}
+
+	ausw();
+}
+
 function cacheData() {
 	const cache = { currentSamples };
 
