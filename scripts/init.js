@@ -166,6 +166,8 @@ function init(samples) {
   app.appendChild(inputTable);
   // Die Optionen für die grafische Auswertung werden hinzugefügt.
   addOptions(document.getElementById("GO"));
+  // Zoom nach dem Aufbau anpassen (requestAnimationFrame wartet auf erstes Layout)
+  updateTableZoom();
 } // end init
 
 function addEvents() {
@@ -177,6 +179,26 @@ function addEvents() {
     currentWidget.addEventListener("change", () => ausw());
   } // end for
 } // end addEvents
+
+// ============================================================
+// Tabellen-Zoom
+// ============================================================
+
+function updateTableZoom() {
+  requestAnimationFrame(() => {
+    const app = document.getElementById("app");
+    if (!app) return;
+    // Zoom auf 1 zurücksetzen, damit scrollWidth die natürliche Breite liefert
+    app.style.zoom = 1;
+    const naturalWidth = app.scrollWidth;
+    const availableWidth = app.parentElement
+      ? app.parentElement.clientWidth
+      : window.innerWidth;
+    // Nur verkleinern (≤ 1), nie vergrößern
+    const zoom = Math.min(1, availableWidth / naturalWidth);
+    app.style.zoom = zoom;
+  });
+}
 
 // ============================================================
 // Dynamische Tabellengrößenänderung
@@ -279,5 +301,6 @@ function resizeTable(newCount) {
   ausw();
 }
 
+window.addEventListener("resize", updateTableZoom);
 init(currentSamples);
 addEvents();
