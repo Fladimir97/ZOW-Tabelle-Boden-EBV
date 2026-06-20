@@ -1,3 +1,13 @@
+# NEU - Jetzt online Testen
+
+**Die Anwendung kann auch unter folgendem [Link](https://fladimir97.github.io/ZOW-Tabelle-Boden-EBV/) online getestet werden. Bitte beachten Sie, dass die Speicher- und Ladefunktionen nur in Chromium Browsern (Chrome, Edge, Brave, etc.) funktionieren.**
+
+Es stehen online folgende **neue Funktionen** zur Verfügung:
+
+- Die Tabelle lässt sich nun dynamisch erweitern. Es können bis zu 15 Spalten für Mischproben hinzugefügt werden. Die Reihenfolge der Spalten lassen sich per drag and drop vertauschen.
+- Die Eingabedaten werden im Browser gecacht. Die Daten gehen beim Schließen des Browser-Fensters nicht mehr verloren.
+- Dieverse Code-Optimierungen und optische Verbesserungen an der GUI
+
 # ZOW-Tabelle für Bodenmaterial und Baggergut nach den Vorgaben der Ersatzbaustoffverordnung - EBV ♻️
 
 Die [Ersatzbaustoffverordnung (EBV)](https://www.gesetze-im-internet.de/ersatzbaustoffv/) regelt seit dem 01. August 2023 bundesweit einheitlich, wie mineralische Ersatzbaustoffe hergestellt und verwertet werden dürfen. Als mineralische Ersatzbaustoffe gelten insbesondere Bauschutt aber auch Bodenmaterial und Baggergut. 
@@ -12,7 +22,6 @@ Den vollen Release der aktuellen Version 1.0.2 finden Sie [hier](https://github.
 Das Programm wurde mit Hilfe von [Electron](https://www.electronjs.org/) kompiliert.
 Bei der grafischen Auswertung wurde auf die [Plotly Graphing Library](https://plotly.com/javascript/) zurückgegriffen.
 
-Die Anwendung kann auch unter folgendem [Link](https://fladimir97.github.io/ZOW-Tabelle-Boden-EBV/) online getestet werden. Bitte beachten Sie, dass die Speicher- und Ladefunktionen nur in Chromium Browsern funktionieren.
 
 ## 2. Wie funktioniert die Tabelle?
 
